@@ -205,8 +205,8 @@ export default function UeberMichPage() {
                 <div className="relative aspect-[4/5] rounded-[calc(1.5rem-0.5rem)] overflow-hidden"
                   style={{ boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.15), 0 16px 48px rgba(14,11,9,0.10)' }}>
                   <Image
-                    src="/images/Brigitte.jpg"
-                    alt="Mae Chee Brigitte – Meditationslehrerin"
+                    src="/images/brigitte-bhutan.jpg"
+                    alt="Mae Chee Brigitte – Meditationslehrerin in Bhutan"
                     fill
                     className="object-cover object-top"
                   />
