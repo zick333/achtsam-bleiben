@@ -70,10 +70,8 @@ export default function UeberMichPage() {
   return (
     <BaseLayout>
 
-      {/* ── HERO: Editorial Split ── */}
+      {/* ── HERO ── */}
       <section className="relative min-h-[85dvh] flex items-end overflow-hidden">
-
-        {/* Full-bleed background image */}
         <div className="absolute inset-0">
           <Image
             src="/images/meditation-hintergrundbild1.jpg"
@@ -83,33 +81,22 @@ export default function UeberMichPage() {
             priority
           />
         </div>
-
-        {/* Sophisticated layered overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0e0b09]/90 via-[#0e0b09]/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0e0b09]/60 via-transparent to-transparent" />
 
-        {/* Hero content */}
         <div className="relative w-full max-w-[1400px] mx-auto px-4 pb-16 md:pb-24">
-
-          {/* Eyebrow badge */}
           <div className="mb-6">
             <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-white/70 backdrop-blur-sm">
               Meditationslehrer & Coach · Frankfurt
             </span>
           </div>
-
-          {/* Massive serif headline */}
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-tight mb-8 max-w-3xl"
-            style={{ textWrap: 'balance' } as React.CSSProperties}>
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-tight mb-8 max-w-3xl">
             Holm<br />Zicker&shy;mann
           </h1>
-
-          {/* Intro line + breadcrumb */}
           <p className="text-white/50 text-sm md:text-base max-w-md leading-relaxed mb-8">
             Über 15 Jahre Erfahrung in Meditation, Achtsamkeit und Coaching —
             mit dem Ziel, innere Ruhe und Klarheit weiterzugeben.
           </p>
-
           <p className="text-[11px] tracking-[0.18em] uppercase text-white/30">
             <Link href="/" className="hover:text-white/60 transition-colors duration-300">Home</Link>
             <span className="mx-2">/</span>
@@ -118,16 +105,13 @@ export default function UeberMichPage() {
         </div>
       </section>
 
-      {/* ── PORTRAIT + QUOTE: Double-Bezel ── */}
+      {/* ── PORTRAIT + QUOTE ── */}
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-[1400px] mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-            {/* Double-Bezel Portrait */}
             <div className="reveal">
-              {/* Outer shell */}
               <div className="p-2 rounded-[2rem] ring-1 ring-black/5 bg-stone-50">
-                {/* Inner core */}
                 <div className="relative aspect-[3/4] rounded-[calc(2rem-0.5rem)] overflow-hidden"
                   style={{ boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.15), 0 20px 60px rgba(14,11,9,0.12)' }}>
                   <Image
@@ -141,11 +125,9 @@ export default function UeberMichPage() {
               </div>
             </div>
 
-            {/* Text + Quote */}
             <div className="flex flex-col gap-8">
-
               <div className="reveal reveal-delay-1">
-                <span className="inline-flex items-center rounded-full border border-[#E8913A]/30 bg-[#E8913A]/8 px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A] mb-5">
+                <span className="inline-flex items-center rounded-full border border-[#E8913A]/30 bg-[#E8913A]/5 px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A] mb-5">
                   Über mich
                 </span>
                 <p className="text-gray-600 text-lg leading-relaxed">
@@ -156,13 +138,10 @@ export default function UeberMichPage() {
                 </p>
               </div>
 
-              {/* Quote — editorial treatment */}
               <div className="reveal reveal-delay-2">
                 <div className="relative pl-7 border-l-2 border-[#E8913A]">
-                  <p className="font-serif text-2xl md:text-3xl italic text-[#1C1410] leading-snug mb-4"
-                    style={{ textWrap: 'balance' } as React.CSSProperties}>
-                    „Es ist schwer das Glück in uns zu finden, aber es ist ganz unmöglich,
-                    es woanders zu finden."
+                  <p className="font-serif text-2xl md:text-3xl italic text-[#1C1410] leading-snug mb-4">
+                    „Es ist schwer das Glück in uns zu finden, aber es ist ganz unmöglich, es woanders zu finden."
                   </p>
                   <cite className="not-italic text-[11px] tracking-[0.15em] uppercase text-stone-400 font-medium">
                     — Nicolas Chamfort
@@ -170,7 +149,6 @@ export default function UeberMichPage() {
                 </div>
               </div>
 
-              {/* Stats row */}
               <div className="reveal reveal-delay-3 grid grid-cols-3 gap-4 pt-4 border-t border-stone-100">
                 {[
                   { value: '15+', label: 'Jahre Praxis' },
@@ -183,70 +161,131 @@ export default function UeberMichPage() {
                   </div>
                 ))}
               </div>
-
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* ── JOURNEY SECTIONS ── */}
+      {/* ── MEIN WEG: Split with Brigitte photo ── */}
       <section className="py-24 md:py-32 bg-white border-t border-stone-100">
-        <div className="max-w-3xl mx-auto px-4 space-y-20">
+        <div className="max-w-[1400px] mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {[
-            {
-              title: 'Mein Weg zur Meditation',
-              paragraphs: [
-                'Meine Meditationsreise begann 2008, als ich das erste Mal über mehrere Tage intensiv meditierte. Heute bin ich selbst Meditationslehrer und gebe mein Wissen weiter. Besonders inspiriert hat mich dabei meine Meditationslehrerin Mae Chee Brigitte — eine Österreicherin, die als buddhistische Nonne seit über 30 Jahren in Thailand lebt und für ihre Arbeit von der UN und dem thailändischen Königshaus geehrt wurde.',
-                'Ich durfte Retreats auf der ganzen Welt besuchen — von Thailand über Mexiko bis nach Spanien, Frankreich und Deutschland. Über die Jahre habe ich mehr als 200 Tage in Retreats verbracht und biete heute wöchentliche Meditationsabende in Frankfurt-Bornheim an.',
-              ],
-            },
-            {
-              title: 'Meditation als tägliche Praxis',
-              paragraphs: [
-                'Auch wenn Meditation für mich heute die Basis meines Alltags ist, war das nicht immer so. Es hat Jahre gedauert, bis ich die Disziplin und Klarheit fand, sie in meinen Alltag zu integrieren. Diese tägliche Praxis hilft mir, achtsamer zu leben, meine eigenen Grenzen zu respektieren und die Signale meines Körpers wahrzunehmen.',
-              ],
-            },
-            {
-              title: 'Offenheit und Neugier',
-              paragraphs: [
-                'Ich habe das Glück, in meinem Leben viele besondere Menschen kennenzulernen, die meine Perspektiven erweitern und mir immer wieder neue Inspiration schenken. Diese Offenheit und Neugier prägen auch meine eigene Entwicklung — ich lerne gerne und bin überzeugt davon, dass jeder Moment eine neue Erkenntnis mit sich bringen kann.',
-              ],
-            },
-            {
-              title: 'Beruflicher Hintergrund',
-              paragraphs: [
-                'Beruflich verbinde ich meine langjährige Erfahrung im Management mit meiner Meditationspraxis. Nach meinem BWL-Studium arbeite ich seit vielen Jahren im Projektmanagement eines Großunternehmens — mit Kontakt zu allen Managementebenen. Diese Verbindung ermöglicht es mir, Menschen auf allen Ebenen dabei zu unterstützen, achtsamer zu arbeiten und eine bessere Balance zu finden.',
-              ],
-            },
-            {
-              title: 'Persönliches',
-              paragraphs: [
-                'Neben der Meditation verbringe ich gerne Zeit in der Natur, praktiziere Yoga und treibe regelmäßig Sport. Diese Aktivitäten helfen mir, geerdet zu bleiben und mich immer wieder mit mir selbst zu verbinden.',
-              ],
-            },
-          ].map((section) => (
-            <div key={section.title} className="reveal">
-              <h2 className="font-serif text-2xl md:text-3xl text-[#1C1410] mb-5 leading-tight">
-                {section.title}
+            <div className="reveal">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="font-serif text-6xl leading-none text-[#1C1410] opacity-[0.06] select-none">01</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A]">Mein Weg</span>
+              </div>
+              <h2 className="font-serif text-2xl md:text-3xl text-[#1C1410] mb-6 leading-tight">
+                Mein Weg zur Meditation
               </h2>
-              <div className="space-y-4">
-                {section.paragraphs.map((p, i) => (
-                  <p key={i} className="text-gray-600 text-lg leading-relaxed">{p}</p>
-                ))}
+              <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+                <p>
+                  Meine Meditationsreise begann 2008, als ich das erste Mal über mehrere Tage
+                  intensiv meditierte. Besonders inspiriert hat mich dabei meine Meditationslehrerin
+                  Mae Chee Brigitte — eine Österreicherin, die als buddhistische Nonne seit über
+                  30 Jahren in Thailand lebt und für ihre Arbeit von der UN und dem thailändischen
+                  Königshaus geehrt wurde.
+                </p>
+                <p>
+                  Ich durfte Retreats auf der ganzen Welt besuchen — von Thailand über Mexiko bis
+                  nach Spanien, Frankreich und Deutschland. Über die Jahre habe ich mehr als 200 Tage
+                  in Retreats verbracht.
+                </p>
               </div>
             </div>
-          ))}
 
+            <div className="reveal reveal-delay-1">
+              <div className="p-2 rounded-[1.5rem] ring-1 ring-black/5 bg-stone-50">
+                <div className="relative aspect-[4/5] rounded-[calc(1.5rem-0.5rem)] overflow-hidden"
+                  style={{ boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.15), 0 16px 48px rgba(14,11,9,0.10)' }}>
+                  <Image
+                    src="/images/Brigitte.jpg"
+                    alt="Mae Chee Brigitte – Meditationslehrerin"
+                    fill
+                    className="object-cover object-top"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 px-5 py-4 bg-gradient-to-t from-black/60 to-transparent">
+                    <p className="text-white text-sm font-medium">Mae Chee Brigitte</p>
+                    <p className="text-white/60 text-xs tracking-wide">Meditationslehrerin · Thailand</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
-      {/* ── CREDENTIALS: Premium Grid ── */}
-      <section className="py-24 md:py-32 bg-white border-t border-stone-100">
+      {/* ── PULL QUOTE ── */}
+      <section className="py-20 md:py-24 bg-stone-50 border-y border-stone-100">
+        <div className="reveal max-w-3xl mx-auto px-4 text-center">
+          <span className="block w-8 h-px bg-[#E8913A] mx-auto mb-8" />
+          <p className="font-serif text-2xl md:text-4xl italic text-[#1C1410] leading-snug mb-6"
+            style={{ textWrap: 'balance' } as React.CSSProperties}>
+            „Jeder Moment bietet eine neue Möglichkeit, innezuhalten und klarer zu sehen."
+          </p>
+          <span className="block w-8 h-px bg-[#E8913A] mx-auto" />
+        </div>
+      </section>
+
+      {/* ── NUMBERED SECTIONS ── */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-3xl mx-auto px-4 space-y-16">
+          {[
+            {
+              num: '02',
+              label: 'Tägliche Praxis',
+              title: 'Meditation als tägliche Praxis',
+              text: 'Auch wenn Meditation für mich heute die Basis meines Alltags ist, war das nicht immer so. Es hat Jahre gedauert, bis ich die Disziplin und Klarheit fand, sie in meinen Alltag zu integrieren. Diese tägliche Praxis hilft mir, achtsamer zu leben, meine eigenen Grenzen zu respektieren und die Signale meines Körpers wahrzunehmen.',
+            },
+            {
+              num: '03',
+              label: 'Haltung',
+              title: 'Offenheit und Neugier',
+              text: 'Ich habe das Glück, in meinem Leben viele besondere Menschen kennenzulernen, die meine Perspektiven erweitern und mir immer wieder neue Inspiration schenken. Diese Offenheit und Neugier prägen auch meine eigene Entwicklung — ich lerne gerne und bin überzeugt davon, dass jeder Moment eine neue Erkenntnis mit sich bringen kann.',
+            },
+            {
+              num: '04',
+              label: 'Beruf',
+              title: 'Beruflicher Hintergrund',
+              text: 'Beruflich verbinde ich meine langjährige Erfahrung im Management mit meiner Meditationspraxis. Nach meinem BWL-Studium arbeite ich seit vielen Jahren im Projektmanagement eines Großunternehmens — mit Kontakt zu allen Managementebenen. Diese Verbindung ermöglicht es mir, Menschen auf allen Ebenen dabei zu unterstützen, achtsamer zu arbeiten und in eine bessere Balance zu finden.',
+            },
+            {
+              num: '05',
+              label: 'Privat',
+              title: 'Persönliches',
+              text: 'Neben der Meditation verbringe ich gerne Zeit in der Natur, praktiziere Yoga und treibe regelmäßig Sport. Diese Aktivitäten helfen mir, geerdet zu bleiben und mich immer wieder mit mir selbst zu verbinden.',
+            },
+          ].map((section, i) => (
+            <div
+              key={section.num}
+              className={`reveal reveal-delay-${(i % 3) + 1} grid grid-cols-[auto_1fr] gap-8 items-start`}
+            >
+              <div className="pt-1 select-none w-14">
+                <span className="font-serif text-5xl text-[#1C1410] opacity-[0.10] leading-none">{section.num}</span>
+              </div>
+              <div>
+                <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A] block mb-2">
+                  {section.label}
+                </span>
+                <h2 className="font-serif text-xl md:text-2xl text-[#1C1410] mb-4 leading-tight">
+                  {section.title}
+                </h2>
+                <p className="text-gray-600 text-lg leading-relaxed">{section.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── CREDENTIALS ── */}
+      <section className="py-24 md:py-32 bg-stone-50 border-t border-stone-100">
         <div className="max-w-[1400px] mx-auto px-4">
 
-          <div className="reveal mb-16 text-center">
-            <span className="inline-flex items-center rounded-full border border-[#E8913A]/30 bg-[#E8913A]/8 px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A] mb-4">
+          <div className="reveal mb-14 text-center">
+            <span className="inline-flex items-center rounded-full border border-[#E8913A]/30 bg-white px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A] mb-4">
               Qualifikationen
             </span>
             <h2 className="font-serif text-3xl md:text-4xl text-[#1C1410] leading-tight">
@@ -254,23 +293,22 @@ export default function UeberMichPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
             {credentials.map((block, i) => (
-              <div
-                key={block.category}
-                className={`reveal reveal-delay-${(i % 4) + 1}`}
-              >
-                {/* Double-bezel credential card */}
-                <div className="p-1.5 rounded-[1.5rem] ring-1 ring-black/5 bg-stone-50 h-full">
-                  <div className="rounded-[calc(1.5rem-0.375rem)] bg-white px-7 py-6 h-full"
-                    style={{ boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.9)' }}>
-                    <p className="text-[10px] font-medium tracking-[0.18em] uppercase text-[#E8913A] mb-5">
-                      {block.category}
-                    </p>
-                    <ul className="space-y-3">
+              <div key={block.category} className={`reveal reveal-delay-${(i % 4) + 1}`}>
+                <div className="p-1.5 rounded-[1.5rem] ring-1 ring-black/5 bg-white/60 h-full">
+                  <div className="rounded-[calc(1.5rem-0.375rem)] bg-white px-7 py-7 h-full"
+                    style={{ boxShadow: 'inset 0 1px 1px rgba(255,255,255,1)' }}>
+                    <div className="flex items-center gap-3 mb-5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#E8913A] flex-shrink-0" />
+                      <p className="text-[10px] font-medium tracking-[0.18em] uppercase text-[#E8913A]">
+                        {block.category}
+                      </p>
+                    </div>
+                    <ul className="space-y-2.5">
                       {block.items.map((item) => (
                         <li key={item} className="flex items-start gap-3 text-gray-600 text-[15px] leading-snug">
-                          <span className="mt-[6px] w-1 h-1 rounded-full bg-stone-300 flex-shrink-0" />
+                          <span className="mt-[7px] w-1 h-1 rounded-full bg-stone-300 flex-shrink-0" />
                           {item}
                         </li>
                       ))}
@@ -284,18 +322,30 @@ export default function UeberMichPage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="py-24 md:py-32 bg-white border-t border-stone-100">
-        <div className="max-w-[1400px] mx-auto px-4 text-center">
+      {/* ── CTA: Dark image backdrop ── */}
+      <section className="relative py-32 md:py-40 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/home-philosophy.jpg"
+            alt=""
+            fill
+            className="object-cover object-center"
+          />
+        </div>
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(14,11,9,0.82)' }} />
+
+        <div className="relative max-w-[1400px] mx-auto px-4 text-center">
           <div className="reveal">
-            <p className="font-serif text-2xl md:text-3xl italic text-[#1C1410] mb-3 leading-snug">
+            <span className="inline-flex items-center rounded-full border border-white/15 bg-white/8 px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-white/60 mb-8">
+              Gemeinsam
+            </span>
+            <p className="font-serif text-3xl md:text-5xl italic text-white leading-snug mb-4 max-w-2xl mx-auto"
+              style={{ textWrap: 'balance' } as React.CSSProperties}>
               Ich freue mich darauf, dich auf deinem Weg zu begleiten.
             </p>
-            <p className="text-stone-400 text-sm mb-10">
+            <p className="text-white/40 text-sm mb-12 tracking-wide">
               Nimm einfach Kontakt auf — ich melde mich zeitnah bei dir.
             </p>
-
-            {/* Button-in-Button pattern */}
             <Link
               href="/kontakt/"
               className="group inline-flex items-center gap-3 rounded-full bg-[#E8913A] px-6 py-3.5 text-white font-medium text-sm tracking-wide transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#d4822f] active:scale-[0.98]"
