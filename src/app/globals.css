@@ -363,14 +363,18 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Scroll reveal animations */
+/* Scroll reveal animations — elements visible by default, animation is enhancement only */
 .reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.animate-ready {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.8s cubic-bezier(0.32, 0.72, 0, 1),
               transform 0.8s cubic-bezier(0.32, 0.72, 0, 1);
 }
-.reveal.revealed {
+.reveal.animate-ready.revealed {
   opacity: 1;
   transform: translateY(0);
 }

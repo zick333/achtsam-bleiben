@@ -7,6 +7,10 @@ import Link from 'next/link';
 
 function useScrollReveal() {
   useEffect(() => {
+    const elements = document.querySelectorAll('.reveal');
+    // Mark elements as animation-ready (hides them) before observing
+    elements.forEach((el) => el.classList.add('animate-ready'));
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -18,7 +22,7 @@ function useScrollReveal() {
       },
       { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     );
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 }
