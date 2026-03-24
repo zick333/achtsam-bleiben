@@ -1,6 +1,5 @@
 import { BaseLayout } from '@/components/BaseLayout';
 import { generatePageMetadata } from '@/lib/metadata';
-import { MapEmbed } from '@/components/MapEmbed';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -104,8 +103,19 @@ export default function KontaktPage() {
               </div>
             </div>
 
-            {/* Right: Google Maps (lazy facade) */}
-            <MapEmbed />
+            {/* Right: Google Maps */}
+            <div className="overflow-hidden" style={{ boxShadow: '0 8px 32px rgba(28,20,16,0.10)' }}>
+              <iframe
+                src="https://maps.google.com/maps?q=Bornheim,+60385+Frankfurt+am+Main&output=embed&z=14"
+                width="100%"
+                height="600"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Frankfurt-Bornheim auf Google Maps"
+              />
+            </div>
 
           </div>
         </div>
