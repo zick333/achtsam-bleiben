@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://achtsam-bleiben.de'),
+  metadataBase: new URL('https://www.achtsam-bleiben.de'),
   title: {
     default: 'Achtsam Bleiben - Meditation und Achtsamkeit in Frankfurt',
     template: '%s - Achtsam Bleiben',

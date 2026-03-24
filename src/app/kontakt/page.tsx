@@ -12,8 +12,9 @@ export const metadata = generatePageMetadata(
 export default function KontaktPage() {
   return (
     <BaseLayout>
+
       {/* Hero */}
-      <section className="relative bg-gray-700 py-24 md:py-32">
+      <section className="relative min-h-[420px] md:min-h-[520px] flex items-end">
         <div className="absolute inset-0 overflow-hidden">
           <Image
             src="/images/meditation-hintergrundbild1.jpg"
@@ -23,74 +24,92 @@ export default function KontaktPage() {
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+        {/* Gradient: transparent top → warm dark bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
+        <div className="relative w-full max-w-[1400px] mx-auto px-4 pb-14 md:pb-20">
+          <p className="text-[11px] tracking-[0.18em] uppercase text-white/50 mb-3">
+            <Link href="/" className="hover:text-white/80 transition-colors duration-200">
+              Home
+            </Link>
+            <span className="mx-2 opacity-50">/</span>
+            Kontakt
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight"
+            style={{ textWrap: 'balance' } as React.CSSProperties}>
             Kontakt
           </h1>
-          <p className="text-sm text-gray-300">
-            <Link href="/" className="hover:underline text-gray-300">Home</Link>
-          </p>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-20 md:py-28" style={{ backgroundColor: '#FAFAF8' }}>
         <div className="max-w-[1400px] mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
             {/* Left: Contact Info */}
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+            <div className="flex flex-col">
+              <h2 className="text-3xl md:text-4xl font-serif text-[#1C1410] mb-10 leading-tight">
                 Schreib mir
               </h2>
 
-              <div className="space-y-6">
-                <div>
+              <div className="space-y-0">
+
+                {/* Name / Address image */}
+                <div className="pb-8">
                   <img
                     src="/images/img-weiss.jpg"
-                    alt=""
+                    alt="Holm Zickermann, Adresse"
                     className="max-w-[220px]"
                   />
                 </div>
 
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 mb-1">
+                <div className="border-t border-stone-200" />
+
+                {/* Email */}
+                <div className="py-8">
+                  <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-stone-400 mb-2">
                     E-Mail
-                  </h3>
+                  </p>
                   <a
                     href="mailto:holm@achtsam-bleiben.de"
-                    className="text-[#E8913A] hover:text-[#d4822f] text-lg transition-colors"
+                    className="text-[#E8913A] hover:text-[#d4822f] text-lg font-medium transition-colors duration-200 underline-offset-4 hover:underline"
                   >
                     holm@achtsam-bleiben.de
                   </a>
                 </div>
 
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500 mb-1">
+                <div className="border-t border-stone-200" />
+
+                {/* Location */}
+                <div className="pt-8">
+                  <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-stone-400 mb-2">
                     Meditationsort
-                  </h3>
-                  <p className="text-gray-900 text-lg leading-relaxed">
+                  </p>
+                  <p className="text-[#1C1410] text-lg leading-relaxed mb-5">
                     Johanniskirche Frankfurt-Bornheim<br />
                     Turmstraße 10, 60385 Frankfurt
                   </p>
                   <Link
                     href="/meditationstermine-in-frankfurt/"
-                    className="inline-block mt-3 text-sm font-bold uppercase tracking-wide px-4 py-2 bg-black hover:bg-[#E8913A] text-white transition-colors duration-200"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#E8913A] hover:bg-[#d4822f] text-white text-sm font-medium tracking-wide transition-colors duration-200 active:scale-[0.98]"
                   >
                     Zu den Terminen
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </Link>
                 </div>
+
               </div>
             </div>
 
             {/* Right: Google Maps */}
-            <div>
+            <div className="overflow-hidden shadow-lg" style={{ boxShadow: '0 8px 32px rgba(28,20,16,0.10)' }}>
               <iframe
                 src="https://maps.google.com/maps?q=Bornheim,+60385+Frankfurt+am+Main&output=embed&z=14"
                 width="100%"
                 height="600"
-                style={{ border: 0 }}
+                style={{ border: 0, display: 'block' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -100,6 +119,7 @@ export default function KontaktPage() {
           </div>
         </div>
       </section>
+
     </BaseLayout>
   );
 }
