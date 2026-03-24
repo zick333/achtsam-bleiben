@@ -181,7 +181,7 @@ export default function UeberMichPage() {
                 <span className="font-serif text-6xl leading-none text-[#1C1410] opacity-[0.06] select-none">01</span>
                 <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A]">Mein Weg</span>
               </div>
-              <h2 className="font-serif text-2xl md:text-3xl text-[#1C1410] mb-6 leading-tight">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#1C1410] mb-6 leading-tight">
                 Mein Weg zur Meditation
               </h2>
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
@@ -274,7 +274,7 @@ export default function UeberMichPage() {
                 <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A] block mb-2">
                   {section.label}
                 </span>
-                <h2 className="font-serif text-xl md:text-2xl text-[#1C1410] mb-4 leading-tight">
+                <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-[#1C1410] mb-4 leading-tight">
                   {section.title}
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed">{section.text}</p>
@@ -292,7 +292,7 @@ export default function UeberMichPage() {
             <span className="inline-flex items-center rounded-full border border-[#E8913A]/40 bg-[#E8913A]/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A] mb-5">
               Qualifikationen
             </span>
-            <h2 className="font-serif text-3xl md:text-5xl text-white leading-tight">
+            <h2 className="font-serif text-4xl md:text-6xl text-white leading-tight">
               Aus- und Weiterbildung
             </h2>
           </div>
@@ -303,7 +303,7 @@ export default function UeberMichPage() {
                 key={block.category}
                 className={`reveal reveal-delay-${(i % 4) + 1} bg-[#1C1410] p-8 md:p-10`}
               >
-                <h3 className="font-serif text-xl md:text-2xl text-[#E8913A] mb-6 leading-tight">
+                <h3 className="font-serif text-2xl md:text-3xl text-[#E8913A] mb-6 leading-tight">
                   {block.category}
                 </h3>
                 <ul className="space-y-4">
