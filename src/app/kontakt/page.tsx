@@ -43,7 +43,7 @@ export default function KontaktPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 md:py-28" style={{ backgroundColor: '#FAFAF8' }}>
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-[1400px] mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
