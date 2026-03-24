@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# visual review screenshots
+/temporary-screenshots/
+
+# local workflow / claude files
+.claude/
+CLAUDE_WORKING_RULES.md
+HOMEPAGE_MAPPING.md
+OPEN_TASKS.md
+SESSION_RESUME.md
+SUBPAGE_SYSTEM_AUDIT.md
+settings-*.json

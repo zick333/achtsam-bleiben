@@ -1,0 +1,172 @@
+{
+  "images": [
+    {
+      "id": "logo-desktop",
+      "localPath": "/images/logo-desktop.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2024/10/cropped-Achtsam-bleiben-logo.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "logo-mobile",
+      "localPath": "/images/logo-mobile.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2024/10/Achtsam-bleiben-logo-mobil.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "bg-grey-pattern",
+      "localPath": "/images/bg-grey-pattern.png",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/04/bg-grey-nocopy.png",
+      "status": "downloaded"
+    },
+    {
+      "id": "hero-bg",
+      "localPath": "/images/hero-bg.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-hintergrundbild1.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "home-philosophy",
+      "localPath": "/images/home-philosophy.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/elementor/thumbs/20231012_163650-scaled-qhje2h3x4drj89x1nmoqsm3c9rufls4fctge1pp7wu.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "coaching-portrait",
+      "localPath": "/images/coaching-portrait.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2023/12/20231012_163650-768x1365.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-dalai-lama",
+      "localPath": "/images/meditation-dalai-lama.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2024/10/meditation-dalai-lama-768x717.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-achtsamkeit",
+      "localPath": "/images/meditation-achtsamkeit.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-achtsamkeit.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-wissenswertes",
+      "localPath": "/images/meditation-wissenswertes.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-wissenswertes-1024x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-meditationstechniken",
+      "localPath": "/images/meditation-meditationstechniken.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-meditationstechniken-1024x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-gefahren",
+      "localPath": "/images/meditation-gefahren.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-gefahren1-1024x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-egoismus",
+      "localPath": "/images/meditation-egoismus.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-egoismus-1024x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-gesundheit",
+      "localPath": "/images/meditation-gesundheit.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-gesundheit.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-einsteigerfragen-faq",
+      "localPath": "/images/meditation-einsteigerfragen-faq.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-einsteigerfragen-faq-1024x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-spiritualitaet",
+      "localPath": "/images/meditation-spiritualitaet.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-spiritualitaet-1000x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-innere-ruhe",
+      "localPath": "/images/meditation-innere-ruhe.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-innere-ruhe-941x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditationsraum",
+      "localPath": "/images/meditationsraum.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditationsraum-1024x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-philosophie",
+      "localPath": "/images/meditation-philosophie.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-philosophie-1024x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-kinder-jugendliche",
+      "localPath": "/images/meditation-kinder-jugendliche.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-kinder-jugendliche-1024x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-fuer-fortgeschrittene",
+      "localPath": "/images/meditation-fuer-fortgeschrittene.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-fuer-fortgeschrittene-1024x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditation-technologien",
+      "localPath": "/images/meditation-technologien.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-technologien-1024x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditationsmythen",
+      "localPath": "/images/meditationsmythen.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditationsmythen.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "meditationsbuecher-meditations-podcasts-meditations-apps",
+      "localPath": "/images/meditationsbuecher-meditations-podcasts-meditations-apps.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditationsbuecher-meditations-podcasts-meditations-apps-1024x720.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "event-johanniskirche",
+      "localPath": "/images/event-johanniskirche.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2025/01/20230413_195740-scaled.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "event-thumbnail",
+      "localPath": "/images/event-thumbnail.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2024/10/2023-07-Meditation-Johanniskirche-3-480x420.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "related-gefahren",
+      "localPath": "/images/related-gefahren.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-gefahren1-680x420.jpg",
+      "status": "downloaded"
+    },
+    {
+      "id": "related-techniken",
+      "localPath": "/images/related-techniken.jpg",
+      "sourceUrl": "https://achtsam-bleiben.de/wp-content/uploads/2019/03/meditation-meditationstechniken-680x420.jpg",
+      "status": "downloaded"
+    }
+  ],
+  "_strategy": {
+    "status": "All images downloaded and migrated",
+    "download_location": "public/images/",
+    "total": 27,
+    "downloaded": 27
+  }
+}

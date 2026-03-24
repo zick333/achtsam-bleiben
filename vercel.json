@@ -1,0 +1,115 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/wp-includes/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/wp-login.php",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/xmlrpc.php",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/wp-cron.php",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/wp-config.php",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/wp-json/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/feed/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/comments/feed/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/trackback/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/page/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/attachment/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    },
+    {
+      "source": "/.well-known/acme-challenge/:path*",
+      "destination": "/410.html",
+      "statusCode": 410
+    }
+  ]
+}

@@ -1,8 +1,14 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-amber-50: #fffbeb;
+  --color-amber-100: #fef3c7;
+  --color-amber-500: #f59e0b;
+  --color-amber-600: #d97706;
+  --color-amber-700: #b45309;
 }
 
 @theme inline {
@@ -12,15 +18,352 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  overflow-x: hidden;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Custom prose styles */
+.prose {
+  --tw-prose-body: #374151;
+  --tw-prose-headings: #111827;
+  --tw-prose-links: #b45309;
+  --tw-prose-bold: #111827;
+  --tw-prose-quotes: #374151;
+  --tw-prose-quote-borders: #d97706;
+}
+
+.prose h2 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  font-weight: 700;
+  color: #111827;
+}
+
+.prose h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.prose p {
+  margin-bottom: 1.25em;
+  line-height: 1.75;
+}
+
+.prose ul, .prose ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
+
+.prose blockquote {
+  border-left: 4px solid #d97706;
+  padding-left: 1em;
+  font-style: italic;
+  background: #fffbeb;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1.5em 0;
+}
+
+.prose img {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  margin: 2em auto;
+}
+
+/* Address image - no centering, minimal margin */
+.prose img.address-image {
+  margin: 0 0 1.5rem 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Address image inline (in text flow, e.g. Datenschutz) */
+.prose img.address-image-inline {
+  margin: 40px 0 1.5rem 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.prose a {
+  color: #b45309;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose a:hover {
+  color: #92400e;
+}
+
+/* ============================================
+   WordPress-compatible image alignment classes
+   Added in Phase C for subpage image support
+   ============================================ */
+
+/* Basic alignment classes for standalone images */
+.prose .alignleft {
+  float: left;
+  margin: 0.5em 1.5em 1em 0;
+  max-width: 50%;
+}
+
+.prose .alignright {
+  float: right;
+  margin: 0.5em 0 1em 1.5em;
+  max-width: 50%;
+}
+
+.prose .aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Figure and caption base styles */
+.prose figure,
+.prose .wp-caption {
+  margin: 1.5em 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+.prose figure img,
+.prose .wp-caption img {
+  margin: 0;
+  display: block;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.prose figcaption,
+.prose .wp-caption-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 0.75em;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Float alignment for figures with captions */
+.prose figure.alignleft,
+.prose .wp-caption.alignleft {
+  float: left;
+  margin: 0.5em 1.5em 1em 0;
+  max-width: 50%;
+}
+
+.prose figure.alignright,
+.prose .wp-caption.alignright {
+  float: right;
+  margin: 0.5em 0 1em 1.5em;
+  max-width: 50%;
+}
+
+.prose figure.aligncenter,
+.prose .wp-caption.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive: stack floated images on mobile */
+@media (max-width: 640px) {
+  .prose .alignleft,
+  .prose .alignright,
+  .prose figure.alignleft,
+  .prose figure.alignright,
+  .prose .wp-caption.alignleft,
+  .prose .wp-caption.alignright {
+    float: none;
+    margin: 1.5em auto;
+    max-width: 100%;
+  }
+}
+
+/* Clearfix to contain floated images */
+.prose::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Clear utility */
+.clear-both {
+  clear: both;
+}
+
+/* Teacher/person section with floated image - clears between sections */
+.prose .teacher-section {
+  overflow: hidden;
+  margin-bottom: 4rem;
+  padding-top: 0;
+}
+
+.prose .teacher-section h2 {
+  margin-top: 0;
+}
+
+.prose .teacher-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Testimonials - alternating backgrounds full width */
+.prose .testimonials {
+  position: relative;
+}
+
+.prose .testimonial {
+  position: relative;
+  padding: 2.5rem 0;
+}
+
+.prose .testimonial::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: -1;
+}
+
+.prose .testimonial:nth-child(odd)::before {
+  background: #ffffff;
+}
+
+.prose .testimonial:nth-child(even)::before {
+  background: #d1d5db;
+}
+
+.prose .testimonial p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #374151;
+  margin: 0 0 1rem 0;
+}
+
+.prose .testimonial-text {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #374151;
+  margin: 0 0 1rem 0;
+}
+
+.prose .testimonial-author,
+.prose .testimonial p.testimonial-author {
+  color: #d97706;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Featured quote - grey background, large font */
+.prose .featured-quote {
+  background: #f3f4f6;
+  border-left: none;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 2.5em 0;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #374151;
+}
+
+.prose .featured-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.prose .featured-quote .quote-author {
+  color: #d97706;
+  font-weight: 600;
+}
+
+/* Image with quote section - two column layout */
+.prose .image-quote-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin: 2em 0;
+}
+
+.prose .image-quote-image {
+  flex-shrink: 0;
+  width: 375px;
+}
+
+.prose .image-quote-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  margin: 0;
+}
+
+.prose .image-quote-text {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.prose .image-quote-text .large-quote {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: #374151;
+  margin: 0 0 1rem 0;
+}
+
+.prose .image-quote-text .quote-author {
+  color: #d97706;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  .prose .image-quote-section {
+    flex-direction: column;
+  }
+
+  .prose .image-quote-image {
+    width: 225px;
+  }
+
+  .prose .image-quote-text .large-quote {
+    font-size: 1.25rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: 2px;
 }
