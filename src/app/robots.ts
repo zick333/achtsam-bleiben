@@ -7,22 +7,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: [
-        '/wp-admin/',
-        '/wp-content/',
-        '/wp-includes/',
-        '/wp-login.php',
-        '/xmlrpc.php',
-        '/wp-cron.php',
-        '/wp-json/',
-        '/tag/',
-        '/category/',
-        '/author/',
-        '/feed/',
-        '/trackback/',
-        '/page/',
-        '/attachment/',
-      ],
     },
     sitemap: 'https://www.achtsam-bleiben.de/sitemap.xml',
   };
