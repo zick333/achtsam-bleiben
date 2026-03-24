@@ -10,13 +10,9 @@ export const metadata = generateBlogMetadata(
 );
 
 export default function BlogPostPage() {
-  const post = getBlogPost('technologie-trifft-achtsamkeit-so-veraendert-die-moderne-welt-die-meditation');
-
-  if (!post) {
-    return <div>Content not found</div>;
-  }
-
+  const slug = 'technologie-trifft-achtsamkeit-so-veraendert-die-moderne-welt-die-meditation';
+  const post = getBlogPost(slug);
+  if (!post) return <div>Content not found</div>;
   const { frontmatter, content } = post;
-
-  return <BlogPost frontmatter={frontmatter} content={content} />;
+  return <BlogPost frontmatter={frontmatter} content={content} slug={slug} />;
 }

@@ -90,7 +90,7 @@ export default function UeberMichPage() {
 
         <div className="relative w-full max-w-[1400px] mx-auto px-4 pb-16 md:pb-24">
           <div className="mb-6">
-            <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-white/70 backdrop-blur-sm">
+            <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[13px] uppercase tracking-[0.14em] font-semibold text-white/70 backdrop-blur-sm">
               Meditationslehrer & Coach · Frankfurt
             </span>
           </div>
@@ -131,7 +131,7 @@ export default function UeberMichPage() {
 
             <div className="flex flex-col gap-8">
               <div className="reveal reveal-delay-1">
-                <span className="inline-flex items-center rounded-full border border-[#E8913A]/30 bg-[#E8913A]/5 px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A] mb-5">
+                <span className="inline-flex items-center rounded-full border border-[#E8913A]/30 bg-[#E8913A]/5 px-3 py-1 text-[13px] uppercase tracking-[0.14em] font-semibold text-[#E8913A] mb-5">
                   Über mich
                 </span>
                 <p className="text-gray-600 text-lg leading-relaxed">
@@ -179,7 +179,7 @@ export default function UeberMichPage() {
             <div className="reveal">
               <div className="flex items-center gap-3 mb-6">
                 <span className="font-serif text-6xl leading-none text-[#1C1410] opacity-[0.06] select-none">01</span>
-                <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A]">Mein Weg</span>
+                <span className="text-[13px] uppercase tracking-[0.14em] font-semibold text-[#E8913A]">Mein Weg</span>
               </div>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#1C1410] mb-6 leading-tight">
                 Mein Weg zur Meditation
@@ -271,7 +271,7 @@ export default function UeberMichPage() {
                 <span className="font-serif text-5xl text-[#1C1410] opacity-[0.10] leading-none">{section.num}</span>
               </div>
               <div>
-                <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A] block mb-2">
+                <span className="text-[13px] uppercase tracking-[0.14em] font-semibold text-[#E8913A] block mb-2">
                   {section.label}
                 </span>
                 <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-[#1C1410] mb-4 leading-tight">
@@ -289,7 +289,7 @@ export default function UeberMichPage() {
         <div className="max-w-[1400px] mx-auto px-4">
 
           <div className="reveal mb-16">
-            <span className="inline-flex items-center rounded-full border border-[#E8913A]/40 bg-[#E8913A]/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A] mb-5">
+            <span className="inline-flex items-center rounded-full border border-[#E8913A]/40 bg-[#E8913A]/10 px-3 py-1 text-[13px] uppercase tracking-[0.14em] font-semibold text-[#E8913A] mb-5">
               Qualifikationen
             </span>
             <h2 className="font-serif text-4xl md:text-6xl text-white leading-tight">
@@ -325,7 +325,7 @@ export default function UeberMichPage() {
       <section className="relative py-32 md:py-40 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/home-philosophy.jpg"
+            src="/images/meditation-hintergrundbild1.jpg"
             alt=""
             fill
             className="object-cover object-center"
@@ -335,23 +335,23 @@ export default function UeberMichPage() {
 
         <div className="relative max-w-[1400px] mx-auto px-4 text-center">
           <div className="reveal">
-            <span className="inline-flex items-center rounded-full border border-white/15 bg-white/8 px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-white/60 mb-8">
+            <span className="inline-flex items-center rounded-full border border-white/30 bg-white/15 px-4 py-1.5 text-[13px] uppercase tracking-[0.14em] font-semibold text-white mb-8">
               Gemeinsam
             </span>
             <p className="font-serif text-3xl md:text-5xl italic text-white leading-snug mb-4 max-w-2xl mx-auto"
               style={{ textWrap: 'balance' } as React.CSSProperties}>
               Ich freue mich darauf, dich auf deinem Weg zu begleiten.
             </p>
-            <p className="text-white/40 text-sm mb-12 tracking-wide">
+            <p className="text-white/75 text-base mb-12 tracking-wide max-w-md mx-auto leading-relaxed">
               Nimm einfach Kontakt auf — ich melde mich zeitnah bei dir.
             </p>
             <Link
               href="/kontakt/"
-              className="group inline-flex items-center gap-3 rounded-full bg-[#E8913A] px-6 py-3.5 text-white font-medium text-sm tracking-wide transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#d4822f] active:scale-[0.98]"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#E8913A] px-8 py-4 text-white font-semibold text-base tracking-wide transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#d4822f] active:scale-[0.98]"
             >
               Kontakt aufnehmen
-              <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-px group-hover:scale-105">
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-px group-hover:scale-105">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </span>

@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "slug": "meditationspause",
-      "title": "Meditationspause vom 01.10.25 bis 31.03.26 aufgrund eigenem Retreat",
-      "date": "2026-03-31",
-      "time": "00:00",
-      "location": "Frankfurt-Bornheim",
-      "description": "Vom 01.10.2025 bis 31.03.2026 befinde ich mich im Sabbatical und werde selber verschiedene Retreats machen. Aus diesem Grund finden bis zum 31.03.26 leider keine Meditationen statt.",
-      "status": "archive"
-    },
-    {
       "slug": "gemeinsam-meditieren-in-bornheim-am-08-04-26",
       "title": "Gemeinsam Meditieren in Bornheim am 08.04.2026",
       "date": "2026-04-08",

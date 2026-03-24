@@ -63,3 +63,23 @@ export function getEvent(slug: string): Event | null {
 export function getAllEventSlugs(): string[] {
   return getEvents().map(e => e.slug);
 }
+
+export function getAdjacentPosts(slug: string): {
+  prev: { slug: string; title: string; featuredImage?: string } | null;
+  next: { slug: string; title: string; featuredImage?: string } | null;
+} {
+  const posts = getAllBlogPosts();
+  const idx = posts.findIndex(p => p.slug === slug);
+  if (idx === -1) return { prev: null, next: null };
+  const prev = idx < posts.length - 1 ? {
+    slug: posts[idx + 1].slug,
+    title: posts[idx + 1].frontmatter.title,
+    featuredImage: posts[idx + 1].frontmatter.featuredImage,
+  } : null;
+  const next = idx > 0 ? {
+    slug: posts[idx - 1].slug,
+    title: posts[idx - 1].frontmatter.title,
+    featuredImage: posts[idx - 1].frontmatter.featuredImage,
+  } : null;
+  return { prev, next };
+}

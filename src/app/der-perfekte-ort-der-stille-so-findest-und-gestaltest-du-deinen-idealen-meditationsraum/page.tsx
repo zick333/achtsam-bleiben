@@ -10,13 +10,9 @@ export const metadata = generateBlogMetadata(
 );
 
 export default function BlogPostPage() {
-  const post = getBlogPost('der-perfekte-ort-der-stille-so-findest-und-gestaltest-du-deinen-idealen-meditationsraum');
-
-  if (!post) {
-    return <div>Content not found</div>;
-  }
-
+  const slug = 'der-perfekte-ort-der-stille-so-findest-und-gestaltest-du-deinen-idealen-meditationsraum';
+  const post = getBlogPost(slug);
+  if (!post) return <div>Content not found</div>;
   const { frontmatter, content } = post;
-
-  return <BlogPost frontmatter={frontmatter} content={content} />;
+  return <BlogPost frontmatter={frontmatter} content={content} slug={slug} />;
 }

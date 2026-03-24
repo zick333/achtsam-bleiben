@@ -10,13 +10,9 @@ export const metadata = generateBlogMetadata(
 );
 
 export default function BlogPostPage() {
-  const post = getBlogPost('finde-deine-ruhe-wie-einfache-hilfsmittel-deine-meditation-vertiefen');
-
-  if (!post) {
-    return <div>Content not found</div>;
-  }
-
+  const slug = 'finde-deine-ruhe-wie-einfache-hilfsmittel-deine-meditation-vertiefen';
+  const post = getBlogPost(slug);
+  if (!post) return <div>Content not found</div>;
   const { frontmatter, content } = post;
-
-  return <BlogPost frontmatter={frontmatter} content={content} />;
+  return <BlogPost frontmatter={frontmatter} content={content} slug={slug} />;
 }

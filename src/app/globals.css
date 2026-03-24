@@ -21,7 +21,7 @@
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -384,8 +384,46 @@ html {
 .reveal-delay-4 { transition-delay: 0.4s; }
 
 
+/* Testimonial progress bar */
+@keyframes progress-bar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
 /* Focus styles */
 *:focus-visible {
   outline: 2px solid #d97706;
   outline-offset: 2px;
+}
+
+/* Blog article drop cap */
+.article-drop-cap > p:first-of-type::first-letter {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4.5rem;
+  line-height: 0.75;
+  float: left;
+  margin-right: 0.08em;
+  margin-top: 0.06em;
+  color: #1C1410;
+  font-weight: normal;
+}
+
+/* Article H2: decorative orange bar above */
+.article-drop-cap h2 {
+  padding-top: 1rem;
+}
+.article-drop-cap h2::before {
+  content: '';
+  display: block;
+  width: 2.25rem;
+  height: 2px;
+  background: #E8913A;
+  margin-bottom: 1.25rem;
+}
+
+/* Article H3: italic serif for editorial distinction */
+.article-drop-cap h3 {
+  font-style: italic;
+  color: #78716c;
+  font-weight: 400;
 }

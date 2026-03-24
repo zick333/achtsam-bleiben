@@ -10,13 +10,9 @@ export const metadata = generateBlogMetadata(
 );
 
 export default function BlogPostPage() {
-  const post = getBlogPost('moegliche-gefahren-von-achtsamkeit-und-meditation');
-
-  if (!post) {
-    return <div>Content not found</div>;
-  }
-
+  const slug = 'moegliche-gefahren-von-achtsamkeit-und-meditation';
+  const post = getBlogPost(slug);
+  if (!post) return <div>Content not found</div>;
   const { frontmatter, content } = post;
-
-  return <BlogPost frontmatter={frontmatter} content={content} />;
+  return <BlogPost frontmatter={frontmatter} content={content} slug={slug} />;
 }
