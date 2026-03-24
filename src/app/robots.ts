@@ -24,6 +24,6 @@ export default function robots(): MetadataRoute.Robots {
         '/attachment/',
       ],
     },
-    sitemap: 'https://achtsam-bleiben.de/sitemap.xml',
+    sitemap: 'https://www.achtsam-bleiben.de/sitemap.xml',
   };
 }

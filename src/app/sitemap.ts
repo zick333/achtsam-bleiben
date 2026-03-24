@@ -3,7 +3,7 @@ import { getAllBlogSlugs, getAllEventSlugs } from '@/lib/content';
 
 export const dynamic = 'force-static';
 
-const BASE_URL = 'https://achtsam-bleiben.de';
+const BASE_URL = 'https://www.achtsam-bleiben.de';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
