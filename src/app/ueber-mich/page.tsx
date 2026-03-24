@@ -285,40 +285,35 @@ export default function UeberMichPage() {
       </section>
 
       {/* ── CREDENTIALS ── */}
-      <section className="py-24 md:py-32 bg-stone-50 border-t border-stone-100">
+      <section className="py-24 md:py-32 bg-[#1C1410]">
         <div className="max-w-[1400px] mx-auto px-4">
 
-          <div className="reveal mb-14 text-center">
-            <span className="inline-flex items-center rounded-full border border-[#E8913A]/30 bg-white px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A] mb-4">
+          <div className="reveal mb-16">
+            <span className="inline-flex items-center rounded-full border border-[#E8913A]/40 bg-[#E8913A]/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-medium text-[#E8913A] mb-5">
               Qualifikationen
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl text-[#1C1410] leading-tight">
+            <h2 className="font-serif text-3xl md:text-5xl text-white leading-tight">
               Aus- und Weiterbildung
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-px bg-white/5">
             {credentials.map((block, i) => (
-              <div key={block.category} className={`reveal reveal-delay-${(i % 4) + 1}`}>
-                <div className="p-1.5 rounded-[1.5rem] ring-1 ring-black/5 bg-white/60 h-full">
-                  <div className="rounded-[calc(1.5rem-0.375rem)] bg-white px-7 py-7 h-full"
-                    style={{ boxShadow: 'inset 0 1px 1px rgba(255,255,255,1)' }}>
-                    <div className="flex items-center gap-3 mb-5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#E8913A] flex-shrink-0" />
-                      <p className="text-[10px] font-medium tracking-[0.18em] uppercase text-[#E8913A]">
-                        {block.category}
-                      </p>
-                    </div>
-                    <ul className="space-y-2.5">
-                      {block.items.map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-gray-600 text-[15px] leading-snug">
-                          <span className="mt-[7px] w-1 h-1 rounded-full bg-stone-300 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+              <div
+                key={block.category}
+                className={`reveal reveal-delay-${(i % 4) + 1} bg-[#1C1410] p-8 md:p-10`}
+              >
+                <h3 className="font-serif text-xl md:text-2xl text-[#E8913A] mb-6 leading-tight">
+                  {block.category}
+                </h3>
+                <ul className="space-y-4">
+                  {block.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="mt-2.5 w-1 h-1 rounded-full bg-[#E8913A]/50 flex-shrink-0" />
+                      <span className="text-white/70 text-base leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
