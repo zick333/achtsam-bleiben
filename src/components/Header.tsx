@@ -59,7 +59,6 @@ export function Header() {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
-  // Light = scrolled (white pill) or mobile menu open
   const light = scrolled;
 
   return (
@@ -185,7 +184,7 @@ export function Header() {
                   transition: `opacity 550ms ${si * 50}ms cubic-bezier(0.32,0.72,0,1), transform 550ms ${si * 50}ms cubic-bezier(0.32,0.72,0,1)`,
                 }}
               >
-                <span className="font-serif text-[1.6rem] text-white leading-none">{section.label}</span>
+                <span className="font-serif text-[1.6rem] text-white leading-none text-left">{section.label}</span>
                 <svg
                   className="w-4 h-4 text-white/30 flex-shrink-0 transition-transform duration-400 ease-[cubic-bezier(0.32,0.72,0,1)]"
                   style={{ transform: mobileSection === section.key ? 'rotate(180deg)' : 'none' }}

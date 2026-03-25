@@ -31,8 +31,10 @@ function formatDateLong(dateStr: string) {
 export function EventDetail({ event }: EventDetailProps) {
   const special = event.status === 'upcoming';
 
-  // Hero image: all events use this church interior photo
-  const heroImage = '/images/IMG_8559-scaled.jpeg';
+  // Hero image: Brigitte event uses her photo, regular events use church panorama
+  const heroImage = special
+    ? '/images/IMG_8559-scaled.jpeg'
+    : '/images/2023-07-Meditation-Johanniskirche-3-rotated.jpg';
 
   // Content photo shown in body section
   const contentImage = special
